@@ -13,6 +13,9 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// controller
+import lipaController from "./controllers/lipa.Controller.js"; 
+
 // middlewares
 app.use(cors());
 app.use(express.json());
@@ -23,9 +26,8 @@ app.get("/", (req, res) => {
     res.send("<h1>implement mpesa stk push</h1>"); 
 });
 
-app.get('/send', (req, res) => {
-    
-})
+app.use('/send', lipaController);
+
 
 // axios.post()
 
