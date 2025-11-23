@@ -20,7 +20,7 @@ const payload = {
 const lipaController = async (req, res) => {
     const { phoneNumber, amount } = req.body;
     if (!phoneNumber || !amount) {
-        res.json({
+        return res.json({
             succcess: false,
             msg: "Please provide all the fields"
         });
