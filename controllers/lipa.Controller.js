@@ -25,7 +25,7 @@ const lipaController = async (req, res) => {
             msg: "Please provide all the fields"
         });
     }
-    axios.post(mpesa_safaricom_url, payload);
+    await axios.post(mpesa_safaricom_url, payload);
 }
 
 export default lipaController;
